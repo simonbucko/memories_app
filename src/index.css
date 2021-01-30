@@ -4,3 +4,33 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
+header {
+  flex-direction: row !important;
+}
+
+div
+  > header
+  > div.MuiToolbar-root.MuiToolbar-regular.jss4.MuiToolbar-gutters
+  > div
+  > h6 {
+  margin: 0 10px 0 5px;
+}
+
+div
+  > header
+  > div.MuiToolbar-root.MuiToolbar-regular.jss4.MuiToolbar-gutters
+  > div
+  > div {
+  background-color: #a800a6;
+}
+
+@media only screen and (max-width: 770px) {
+  header {
+    flex-direction: column !important;
+  }
+
+  #root > div > header > div.jss7 > a {
+    font-size: 2.75rem;
+  }
+}

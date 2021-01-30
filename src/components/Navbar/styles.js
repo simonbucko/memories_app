@@ -48,6 +48,32 @@ export default makeStyles((theme) => ({
         },
         profile: {
             justifyContent: 'center'
+        },
+        heading: {
+            fontSize: '1.75rem'
+        },
+        toolbar: {
+            width: '280px'
         }
+
+    },
+    [theme.breakpoints.up('sm')]: {
+        heading: {
+            fontSize: '3.75rem'
+        },
+        appBar: {
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+        },
+    },
+    [theme.breakpoints.down('xs')]: {
+        userName: {
+            display: 'none'
+        },
+        purple: {
+            marginRight: 10
+        }
+
     }
 }));
