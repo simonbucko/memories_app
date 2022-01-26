@@ -1,6 +1,6 @@
 import axios from "axios";
 //TODO: set to true before deployment
-const server = false;
+const server = true;
 const url = server
   ? "https://memories-app3.herokuapp.com"
   : "http://www.localhost:5000";
