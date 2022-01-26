@@ -117,6 +117,7 @@ const Form = ({ setCurrentId, currentId }) => {
           fullWidth
           value={postData.tags}
           onChange={handleOnChange}
+          placeholder="E.g. trip,friends,home"
         />
         <div
           ref={inputFile}
