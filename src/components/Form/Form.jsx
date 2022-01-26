@@ -11,6 +11,7 @@ import FileBase from "react-file-base64";
 import noImg from "./noImg";
 //icons
 import AddAPhotoIcon from "@material-ui/icons/AddAPhoto";
+import DoneIcon from "@material-ui/icons/Done";
 //redux
 import { useDispatch, useSelector } from "react-redux";
 import { createPost, updatePost } from "../../redux/actions/posts";
@@ -144,7 +145,14 @@ const Form = ({ setCurrentId, currentId }) => {
             onClick={handleOpenFS}
           >
             <Typography align="center" variant="h5" style={{ display: "flex" }}>
-              <AddAPhotoIcon className={classes.addPhotoIcon} />
+              {postData.selectedFile === "" ? (
+                <AddAPhotoIcon className={classes.addPhotoIcon} />
+              ) : (
+                <span className={classes.attachedButton}>
+                  <DoneIcon />
+                  File Attached
+                </span>
+              )}
             </Typography>
           </Button>
         </Tooltip>
@@ -157,7 +165,7 @@ const Form = ({ setCurrentId, currentId }) => {
           type="submit"
           fullWidth
         >
-          Submit
+          {currentId ? "UPDATE MEMORY" : "CREATE MEMORY"}
         </Button>
         <Button
           variant="contained"
