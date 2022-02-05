@@ -11,6 +11,7 @@ This full-stack MERN project, that allows users to login with their Google acoou
 ## Used stack
 
 - React
+- Redux
 - NodeJS
 - Express
 - MongoDB
